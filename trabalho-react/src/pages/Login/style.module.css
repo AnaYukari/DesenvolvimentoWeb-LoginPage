@@ -1,0 +1,138 @@
+.App {
+  text-align: center;
+  }
+
+  .App-logo {
+    height: 90px;
+    display:flex;
+    flex-direction: column;
+    margin-left: 310px;
+  }
+  .App-header {
+    padding: 30px;
+    min-height: 100vh;
+    position: relative;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    width: 100%;
+    background-image: url(trabalho-react\public\NetflixBackground.jpg);
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .Login-Box {
+    display: grid;
+    place-items: center;
+  }
+
+  .Login-Box-Container {
+    height: 750px;
+    width: 450px;
+    margin-top: -10px;
+    padding-top: 10px;
+    background-color: rgba(0, 0, 0, 0.644);
+    display: block;
+    border-radius: 5px;
+  }
+
+  .App-link {
+    color: #0071eb;
+  }
+
+  .Texto-pequeno {
+  font-size: 17px;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;;
+  }
+
+  .Lembrar{
+    font-size: 17px;
+    display: flex;
+    justify-content: start;
+    margin-left: 80px;
+  }
+
+  .Assine {
+    color: gray;
+    font-size: 16px;
+    display: flex;
+    justify-content: start;
+    margin-left: 80px;
+  }
+
+  .reCaptcha{
+    font-size: 12px;
+    color: gray;
+    text-align: justify;
+    display: block;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  button {
+    border-radius: 5px;
+    border: none;
+    background-color: #E50914;
+    color: white;
+    height: 40px;
+    width: 310px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .EmaileSenha {
+    background-color: rgba(0, 0, 0, 0.637);
+    color: aliceblue;
+    border: 1pt wheat solid;
+    border-radius: 4px;
+    height: 55px;
+    width: 300px;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 16px;
+  }
+
+  b{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+    margin-left: 90px;
+    font-size: 35px;
+  }
+
+  .shadow{
+    background-color: #0000002f;
+  }
+
+  .App-footer{
+    background-color: #000000;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .App-footerCont{
+    display: block;
+    place-items: center;
+    width: 1000px;
+  }
+
+  .Footer-cont{
+    display: inline-flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 40px;
+    color: aliceblue;
+  }
+
+  .Footer-cont  a {
+    text-decoration: underline;
+    color: rgb(190, 190, 190);
+    font-size: 14px;
+    display: flex;
+  }
+
+  .mensagem-de-erro{
+    color: gray;
+    font-size: 18px;
+  }
