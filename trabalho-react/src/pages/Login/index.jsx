@@ -1,5 +1,5 @@
-import logo from "trabalho-react\public\NetflixLogo.png";
-import "./style.module.css";
+import logo from "../../images/NetflixLogo.png";
+import style from "./style.module.css";
 import { useEffect, useState } from "react";
 
 function Login() {
@@ -19,7 +19,7 @@ function Login() {
 
   useEffect(() => {
     if (count !== 0) {
-      setCount((count) => 0);
+      setCount(0);
       if (email === "") {
         console.clear();
         console.log("Esqueceu de por email.");
@@ -42,7 +42,7 @@ function Login() {
         }
       }
     }
-  },[count]);
+  },[count, email, password]);
 
   useEffect(() => {
     if (check !== 0) {
@@ -61,55 +61,56 @@ function Login() {
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <>
+    <div className={style.App}>
+      <header className={style.AppHeader}>
         <div>
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={logo} className={style.AppLogo} alt="logo" />
         </div>
-        <div className="Login-Box">
-          <div className="Login-Box-Container">
+        <div className={style.LoginBox}>
+          <div className={style.LoginBoxContainer}>
             <p>
               <b>Entrar</b>
             </p>
             <p>
               <input
-                className="EmaileSenha"
+                className={style.EmaileSenha}
                 placeholder="Insira seu Email ou número de telefone."
                 onChange={(e) => setEmail(e.target.value)}
               />
             </p>
             <p>
               <input
-                className="EmaileSenha"
+                className={style.EmaileSenha}
                 placeholder="Senha"
                 onChange={(e) => setPassword(e.target.value)}
                 type="password"
               />
             </p>
-            {mensagemErro && <p className="mensagem-de-erro">{mensagemErro}</p>}
+            {mensagemErro && <p className={style.mensagemDeErro}>{mensagemErro}</p>}
             <button onClick={addCount}>Entrar</button>
             <p>
-              <a className="Texto-pequeno">Esqueceu a senha?</a>
+              <a className={style.TextoPequeno}>Esqueceu a senha?</a>
             </p>
-            <div className="Lembrar">
+            <div className={style.Lembrar}>
               <input type="checkbox" name="lembrar" onChange={addCheck} />
               <label htmlFor="lembrar"> Lembre-se de mim!</label>
             </div>
-            <p className="Assine">
-              Novo por aqui?<a className="App-link"> Assine agora</a>.
+            <p className={style.Assine}>
+              Novo por aqui?<a className={style.AppLink}> Assine agora</a>.
             </p>
-            <div className="reCaptcha">
-              <p className="SaibaMais">
+            <div className={style.reCaptcha}>
+              <p className={style.SaibaMais}>
                 Esta página é protegida pelo Google reCAPTCHA para garantir que
-                você não é um robô.<a className="App-link"> Saiba mais.</a>
+                você não é um robô.<a className={style.AppLink}> Saiba mais.</a>
               </p>
             </div>
           </div>
         </div>
       </header>
-      <footer className="App-footer">
-        <div className="App-footerCont">
-          <div className="Footer-cont">
+      <footer className={style.AppFooter}>
+        <div className={style.AppFooterCont}>
+          <div className={style.FooterCont}>
             <p>Dúvidas? Uma pena.</p>
             <p>
               <a>Perguntas frequentes</a>
@@ -118,7 +119,7 @@ function Login() {
               <a>Preferências de cookies</a>
             </p>
           </div>
-          <div className="Footer-cont">
+          <div className={style.FooterCont}>
             <p>
               <a>Central de Ajuda</a>
             </p>
@@ -126,12 +127,12 @@ function Login() {
               <a>Informações corporativas</a>
             </p>
           </div>
-          <div className="Footer-cont">
+          <div className={style.FooterCont}>
             <p>
               <a>Termos de Uso</a>
             </p>
           </div>
-          <div className="Footer-cont">
+          <div className={style.FooterCont}>
             <p>
               <a>Privacidade</a>
             </p>
@@ -139,6 +140,7 @@ function Login() {
         </div>
       </footer>
     </div>
+    </>
   );
 }
 
